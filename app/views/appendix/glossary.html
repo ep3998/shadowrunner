@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="col-lg-12">
+        <h2>Glossary</h2>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <ul>
+            <li ng-repeat="term in terms">
+                <p>Name: {{term.name}}</p>
+                <p>Id: {{term.api_name}}</p>
+                <p>{{term.definition}}</p>
+            </li>
+        </ul>
+    </div>
+</div>

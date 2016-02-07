@@ -1,0 +1,16 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+            <h2>Active Characters</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <ul>
+                <li ng-repeat="char in chars">
+                    <button type="button" class="btn btn-primary" ng-click="charClick(char._id)">{{char.name}}</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

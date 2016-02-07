@@ -1,27 +1,82 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="shadowrunnerApp">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>My AngularJS App</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="shared/css/bootstrap.css">
-  <link rel="stylesheet" href="app.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Shadowrunner</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="shared/css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="shared/css/view/style.css">
 </head>
 <body>
-  <ul class="menu">
-    <li><a href="#/view1">view1</a></li>
-  </ul>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Shadowrunner</a>
+        </div>
 
-  <div ng-view></div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="main-nav-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#/">Creator<span class="sr-only">(current)</span></a></li>
+                <li><a href="#characters">Characters</a></li>
+                <li><a href="#appendix">Appendix</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right" ng-controller="HelpCtrl">
+                <li class="dropdown" uib-dropdown is-open="status.isopen">
+                    <a href="#" class="dropdown-toggle" role="button" uib-dropdown-toggle>Help <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu" uib-dropdown-menu >
+                        <li role="menuitem"><a href="#">Creator</a></li>
+                        <li role="menuitem"><a href="#">Characters</a></li>
+                        <li role="menuitem"><a href="#">Story</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
 
-  <!-- In production use:
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
-  -->
-  <script src="bower_components/angular/angular.js"></script>
-  <script src="bower_components/angular-route/angular-route.js"></script>
-  <script src="app.js"></script>
-  <script src="view1/view1.js"></script>
+<div ng-view class="view-animate"></div>
+
+<!-- In production use:
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+-->
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+
+<!-- app -->
+<script src="app.js"></script>
+
+<! -- services -->
+<script src="services/mongo.js"></script>
+<script src="services/session.js"></script>
+
+<!-- modules -->
+<script src="nav/nav.module.js"></script>
+<script src="nav/nav.controller.js"></script>
+
+<script src="appendix/appendix.module.js"></script>
+<script src="appendix/appendix.controller.js"></script>
+
+<script src="character/char.module.js"></script>
+<script src="character/char.controller.js"></script>
+<script src="character/char.sheet.controller.js"></script>
+
+<script src="glossary/glossary.module.js"></script>
+<script src="glossary/glossary.controller.js"></script>
+
+
+
 </body>
 </html>

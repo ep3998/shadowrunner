@@ -1,12 +1,34 @@
 'use strict';
 
 // Declare app level module which depends on views, and components
-angular.module('myApp', [
-  'ngRoute',
-  'myApp.view1',
-  'myApp.view2',
-  'myApp.version'
-]).
-config(['$routeProvider', function($routeProvider) {
-  $routeProvider.otherwise({redirectTo: '/view1'});
-}]);
+angular
+    .module('shadowrunnerApp', [
+        'ngRoute',
+        'ngAnimate',
+        'ngResource',
+        'ui.bootstrap',
+        'nav',
+        'char',
+        'appendix',
+        'glossary'
+    ]).config(['$routeProvider', function($routeProvider){
+        $routeProvider
+            .when('/', {
+                templateUrl: 'views/index/home.html'
+            })
+            .when('/characters', {
+                templateUrl: 'views/characters/char-list.html',
+                controller: 'CharListCtrl'
+            })
+            .when('/characters/sheet', {
+                templateUrl: 'views/characters/char-sheet.html',
+                controller: 'CharSheetCtrl'
+            })
+            .when('/appendix', {
+                templateUrl: 'views/appendix/appendix.html',
+                controller: 'AppendixCtrl'
+            })
+            .otherwise({
+                redirectTo: '/'
+            })
+    }]);
