@@ -1,12 +1,83 @@
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-lg-12">
-            <h2>Name: {{char.name}}</h2>
+    <form class="form-horizontal">
+        <div class="form-group">
+            <span class="col-md-1">Personal</span>
+            <div class="col-md-8">
+                <div class="form-group row">
+                    <label for="inputName" class="control-label col-md-1">Name</label>
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" id="inputName" placeholder="Jane Doe" ng-model="char.name">
+                    </div>
+                    <label for="inputAge" class="control-label col-md-1">Age</label>
+                    <div class="col-md-1">
+                        <input type="number" class="form-control" id="inputAge" placeholder="50" ng-model="char.age">
+                    </div>
+                    <label for="inputHeight" class="control-label col-md-1">Height</label>
+                    <div class="col-md-1">
+                        <input type="text" class="form-control" id="inputHeight" placeholder="5ft 6in" ng-model="char.height">
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+        <div class="form-group">
+            <span class="col-md-1">Attributes</span>
+            <div class="col-md-9">
+                <div class="form-group row">
+                    <div class="form-group">
+                        <label for="inputBody" class="control-label col-md-1">Body</label>
+                        <div class="col-md-1">
+                            <input type="number" class="form-control" id="inputBody" ng-model="char.attributes.physical.body">
+                        </div>
+                        <label for="inputAgility" class="control-label col-md-1">Agility</label>
+                        <div class="col-md-1">
+                            <input type="number" class="form-control" id="inputAgility" ng-model="char.attributes.physical.agility">
+                        </div>
+                        <label for="inputReaction" class="control-label col-md-1">Reaction</label>
+                        <div class="col-md-1">
+                            <input type="number" class="form-control" id="inputReaction" ng-model="char.attributes.physical.reaction">
+                        </div>
+                        <label for="inputStrength" class="control-label col-md-1">Strength</label>
+                        <div class="col-md-1">
+                            <input type="number" class="form-control" id="inputStrength" ng-model="char.attributes.physical.strength">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <span class="col-md-1"></span>
+            <div class="col-md-9">
+                <div class="form-group row">
+                    <div class="form-group">
+                        <label for="inputWillpower" class="control-label col-md-1">Willpower</label>
+                        <div class="col-md-1">
+                            <input type="number" class="form-control" id="inputWillpower" ng-model="char.attributes.mental.willpower">
+                        </div>
+                        <label for="inputLogic" class="control-label col-md-1">Logic</label>
+                        <div class="col-md-1">
+                            <input type="number" class="form-control" id="inputLogic" ng-model="char.attributes.mental.logic">
+                        </div>
+                        <label for="inputIntuition" class="control-label col-md-1">Intuition</label>
+                        <div class="col-md-1">
+                            <input type="number" class="form-control" id="inputIntuition" ng-model="char.attributes.mental.intuition">
+                        </div>
+                        <label for="inputCharisma" class="control-label col-md-1">Charisma</label>
+                        <div class="col-md-1">
+                            <input type="number" class="form-control" id="inputCharisma" ng-model="char.attributes.mental.charisma">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-xs-10">
+                <button type="submit" class="btn btn-primary" ng-click="save()">Save</button>
+            </div>
+        </div>
+    </form>
     <div class="row">
         <div class="col-md-8">
-            Raw: {{char}}
+            <pre>Raw: {{char | json}}</pre>
         </div>
         <div class="col-md-4">
             <p>Calculated Stats:</p>

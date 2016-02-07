@@ -1,0 +1,7 @@
+[
+  {"difficulty":"Easy","threshold":"6"},
+  {"difficulty":"Average","threshold":"12"},
+  {"difficulty":"Hard","threshold":"18"},
+  {"difficulty":"Very Hard","threshold":" 24"},
+  {"difficulty":"Extreme","threshold":"30"}
+]

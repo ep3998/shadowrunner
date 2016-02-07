@@ -1,0 +1,10 @@
+[
+  {"task": "Fast", "duration":"1 combat turn"},
+  {"task": "Quick", "duration":"1 minute"},
+  {"task": "Short", "duration":"10 minutes"},
+  {"task": "Average", "duration":"30 minutes"},
+  {"task": "Long", "duration":"1 hour"},
+  {"task": "Consuming", "duration":"1 day"},
+  {"task": "Exhaustive", "duration":"1 week"},
+  {"task": "Mammoth", "duration":"1 month"}
+]

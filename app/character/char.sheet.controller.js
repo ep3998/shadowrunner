@@ -25,5 +25,20 @@
             $scope.char.$promise.then(function(data){
                 $scope.initiative = calcInitiative(data);
             });
+
+            $scope.save = function(){
+                if($scope.char._id != null){
+                    Mongo.update({
+                        model:"characters",
+                        id: $scope.char._id
+                    },
+                    $scope.char);
+                } else {
+                    Mongo.save({
+                        model:"characters"
+                        },
+                    $scope.char);
+                }
+            }
         }]);
 })();
