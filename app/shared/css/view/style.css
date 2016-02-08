@@ -17,3 +17,18 @@
     transition: .5s linear all;
     opacity: 0;
 }
+
+.condition-fill {
+    background-color: rgba(255, 0, 0, 0.5);
+}
+.condition-hover {
+    background-color: rgba(255, 0, 0, 0.13);
+}
+
+.condition-block {
+    background-color: grey;
+}
+
+.condition-btn {
+
+}
