@@ -34,5 +34,7 @@ Use: When you need to work on something for a long duration of time, you make re
 
 __Teamwork__ - Same as above but additional players can contribute their Skill + Attribute to a roll
 
-
-
+_Skills_
+Skills use a combination of a base attribute (Strength, Willpower...) and your rating/training of that skill. If you don't have a skill but still want to try a test, you can do an `Attribute - 1` check if "defaulting" is allowed. 
++ The skill will state if defaulting is not allowed
++ The final sum of "Attribute + Skill Rating" is how many dice you can roll for that specific test

@@ -72,8 +72,17 @@
                 </div>
             </div>
             <div class="form-group">
-                <div class="col-xs-10">
+                <div class="col-md-4">
+                    <p>Calculated Stats:</p>
+                    <p>Initiative: {{char.attributes.special.initiative}}</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-xs-1">
                     <button type="submit" class="btn btn-primary" ng-click="save()">Save</button>
+                </div>
+                <div class="col-xs-1">
+                    <button type="submit" class="btn btn-primary" ng-click="cancel()">Cancel</button>
                 </div>
             </div>
         </form>
@@ -84,10 +93,22 @@
         <table class="table tabled-bordered">
             <tr ng-repeat="row in (conditionPhysical | numRowFilter:3)">
                 <td class="{{condition.classes}}"
-                    ng-click="physicalClick(condition.index)"
-                    ng-mouseover="physicalHover(condition.index)"
-                    ng-mouseleave="physicalReset()"
+                    ng-click="conditionClick($event, 'physical', condition.index, char.condition.physical.max, conditionPhysical)"
+                    ng-mouseover="conditionHover(condition.index, char.condition.physical.max, conditionPhysical)"
+                    ng-mouseleave="conditionReset(char.condition.physical.max, conditionPhysical)"
                     ng-repeat="condition in (conditionPhysical | numColFilter:row:3)">
+                    {{condition.index}}
+                </td>
+            </tr>
+        </table>
+        Stun
+        <table class="table tabled-bordered">
+            <tr ng-repeat="row in (conditionStun | numRowFilter:3)">
+                <td class="{{condition.classes}}"
+                    ng-click="conditionClick($event, 'stun', condition.index, char.condition.stun.max, conditionStun)"
+                    ng-mouseover="conditionHover(condition.index, char.condition.stun.max, conditionStun)"
+                    ng-mouseleave="conditionReset(char.condition.stun.max, conditionStun)"
+                    ng-repeat="condition in (conditionStun | numColFilter:row:3)">
                     {{condition.index}}
                 </td>
             </tr>
@@ -99,8 +120,7 @@
             <pre>Raw: {{char | json}}</pre>
         </div>
         <div class="col-md-4">
-            <p>Calculated Stats:</p>
-            <p>Initiative: {{initiative}}</p>
+            <pre>Penalties: {{penalties | json}}</pre>
         </div>
     </div>
 </div>

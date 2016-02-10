@@ -8,8 +8,6 @@
     .filter("numColFilter", function(){
         return function(input, row, numColumns){
             var returnArray = [];
-            console.log("row - " + row + " columns - " + numColumns);
-
             for(var x = row * numColumns; x < row * numColumns + numColumns; x++){
                 var condition = input[x];
                 if(x < input.length){
