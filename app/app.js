@@ -6,15 +6,18 @@ angular
         'ngRoute',
         'ngAnimate',
         'ngResource',
-        'ui.bootstrap',
+        'mgcrea.ngStrap',
+        'mgcrea.ngStrap.helpers.dimensions',
+        'mgcrea.ngStrap.helpers.debounce',
         'nav',
         'char',
         'appendix',
-        'glossary'
+        'glossary',
+        'creator'
     ]).config(['$routeProvider', function($routeProvider){
         $routeProvider
-            .when('/', {
-                templateUrl: 'views/index/home.html'
+            .when('/creator', {
+                templateUrl: 'views/creator/creator.html'
             })
             .when('/characters', {
                 templateUrl: 'views/characters/char-list.html',
@@ -29,6 +32,6 @@ angular
                 controller: 'AppendixCtrl'
             })
             .otherwise({
-                redirectTo: '/'
+                redirectTo: '/creator'
             })
     }]);

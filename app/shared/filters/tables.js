@@ -15,7 +15,7 @@
                 }
                 //else{
                 //    var blankCell = {
-                //        "index": x,
+                //        "creator": x,
                 //        "classes": "condition-block"
                 //    };
                 //    returnArray.push(blankCell); //this is used for the empty cells

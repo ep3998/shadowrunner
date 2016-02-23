@@ -32,3 +32,11 @@
 .condition-btn {
 
 }
+
+.bs-sidebar li.active {
+    border-right: 2px solid royalblue;
+}
+
+.content {
+    margin-top: 70px;
+}

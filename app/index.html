@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="shared/css/view/style.css">
 </head>
 <body>
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation" bs-navbar>
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -26,14 +26,14 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="main-nav-1">
             <ul id="navMain" class="nav navbar-nav" ng-controller="NavCtrl">
-                <li id="navCreator" class="active"><a href="#/" ng-click="navClick($event)">Creator</a></li>
-                <li id="navCharacter"><a href="#characters" ng-click="navClick($event)">Characters</a></li>
-                <li id="naveAppendix"><a href="#appendix" ng-click="navClick($event)">Appendix</a></li>
+                <li id="navCreator" data-match-route="/creator"><a href="#">Creator</a></li>
+                <li id="navCharacter" data-match-route="/characters"><a href="#/characters">Characters</a></li>
+                <li id="naveAppendix" data-match-route="/appendix"><a href="#/appendix">Appendix</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right" ng-controller="HelpCtrl">
-                <li class="dropdown" uib-dropdown is-open="status.isopen">
-                    <a href="#" class="dropdown-toggle" role="button" uib-dropdown-toggle>Help <span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu" uib-dropdown-menu >
+                <li class="dropdown">
+                    <a class="dropdown-toggle" role="button" bs-dropdown>Help <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
                         <li role="menuitem"><a href="#">Creator</a></li>
                         <li role="menuitem"><a href="#">Characters</a></li>
                         <li role="menuitem"><a href="#">Story</a></li>
@@ -44,6 +44,7 @@
     </div><!-- /.container-fluid -->
 </nav>
 
+<div style="margin-top: 70px"></div>
 <div ng-view class="view-animate"></div>
 
 <!-- In production use:
@@ -52,8 +53,9 @@
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/angular-route/angular-route.js"></script>
 <script src="bower_components/angular-animate/angular-animate.js"></script>
-<script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
 <script src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="bower_components/angular-strap/dist/angular-strap.js"></script>
+<script src="bower_components/angular-strap/dist/angular-strap.tpl.js"></script>
 
 <!-- app -->
 <script src="app.js"></script>
@@ -79,6 +81,8 @@
 <script src="glossary/glossary.module.js"></script>
 <script src="glossary/glossary.controller.js"></script>
 
+<script src="creator/creator.module.js"></script>
+<script src="creator/creator.controller.js"></script>
 
 
 </body>

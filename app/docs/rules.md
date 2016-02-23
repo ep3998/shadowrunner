@@ -38,3 +38,20 @@ _Skills_
 Skills use a combination of a base attribute (Strength, Willpower...) and your rating/training of that skill. If you don't have a skill but still want to try a test, you can do an `Attribute - 1` check if "defaulting" is allowed. 
 + The skill will state if defaulting is not allowed
 + The final sum of "Attribute + Skill Rating" is how many dice you can roll for that specific test
+
+_Edge_
+Edge is the "luck" modifier of the game. It can be used for the following:
++ Push the Limit: Add edge rating to a test - each Edge dice also can be re-rolled again on a 6
++ Second chance: Re-roll all dice that weren't hits
++ Seize the Initiative: Move to the top of initiative order
++ Blitz: Roll 5 Initiative dice for a Combat Turn
++ Close Call: Negate the effects of a glitch/downgrade a critical glitch
++ Dead Man's Trigger: When about to fall unconscious or die, can make a \[Body + Willpower\](3) test to spend any remaining actions before doing so
+
+You can also permanently burn Edge to do the following:
++ Smackdown: Auto succeed an action with 4 hits
++ Not Dead Yet: In a lethal situation (bullet to head, grenade in face), you manage to survive, though still with the consequences of that event (bullet still hits head)
+
+You can regain edge doing the following:
++ Fulfilling meal, good night's sleep 
++ GM privy - good roleplay, heroic acts, achievements of goals, pushing the story forward, etc.
