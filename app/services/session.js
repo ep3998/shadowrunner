@@ -10,12 +10,19 @@
 
     function session(){
         var ids = {
-            character: ''
+            sheetCharacter: ''
+        };
+
+        var creator = {
+            concept: {}
         };
 
         return {
-            getCharacter: function(){ return ids.character;},
-            setCharacter: function(id){ ids.character = id;}
+            getSheetCharacter: function(){ return ids.sheetCharacter;},
+            setSheetCharacter: function(id){ ids.sheetCharacter = id;},
+
+            getCreateConcept: function(){ return creator.concept;},
+            setCreateConcept: function(data){ creator.concept = data;}
         }
     }
 })();

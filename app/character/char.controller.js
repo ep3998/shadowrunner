@@ -13,8 +13,8 @@
         });
 
         $scope.charClick = function(id){
-            Session.setCharacter(id);
-            $log.log("Current Character Id", Session.getCharacter());
+            Session.setSheetCharacter(id);
+            $log.log("Current Character Id", Session.getSheetCharacter());
             $location.path('characters/sheet');
         };
     }]);

@@ -132,10 +132,10 @@
 
 
             //Setup character functions
-            if(Session.getCharacter() != ''){
+            if(Session.getSheetCharacter() != ''){
                 $scope.char = Mongo.get({
                     model: "characters",
-                    id: Session.getCharacter()
+                    id: Session.getSheetCharacter()
                 });
 
                 $scope.char.$promise.then(function(data){
